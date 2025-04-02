@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { CgMenu } from "react-icons/cg";
 import { CgProfile } from "react-icons/cg";
@@ -11,9 +12,11 @@ const Header = () => {
         </button>
       </div>
       <div>
-        <span className="text-2xl font-bold neon-text cursor-pointer">
-          Lucky Word Game
-        </span>
+        <Link href={`/`}>
+          <span className="text-2xl font-bold neon-text cursor-pointer">
+            Lucky Word Game
+          </span>
+        </Link>
       </div>
       <div>
         <button>
