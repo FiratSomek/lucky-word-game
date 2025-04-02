@@ -4,10 +4,10 @@ import { CgProfile } from "react-icons/cg";
 
 const Header = () => {
   return (
-    <div className="flex align-center justify-between p-6 border-10 border-transparent border-gradient">
+    <div className="flex align-center justify-between p-6 header-border drop-shadow-[0_2px_2px_yellow]">
       <div>
         <button>
-          <CgMenu className="size-7 text-blue-800 hover:text-blue-500 cursor-pointer" />
+          <CgMenu className="size-7 text-green-400 hover:text-yellow-200 cursor-pointer" />
         </button>
       </div>
       <div>
@@ -17,7 +17,7 @@ const Header = () => {
       </div>
       <div>
         <button>
-          <CgProfile className="size-7 text-blue-800 hover:text-blue-500 cursor-pointer" />
+          <CgProfile className="size-7 text-green-400 hover:text-yellow-200 cursor-pointer" />
         </button>
       </div>
     </div>
