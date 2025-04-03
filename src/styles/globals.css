@@ -21,7 +21,6 @@ body {
 .header-border:hover {
   animation: neon-border 0.5s infinite alternate;
 }
-
 .btn-border {
   border-width: 8px;
   border-image-slice: 1;
@@ -31,6 +30,17 @@ body {
 .btn-border:hover {
   animation: neon-border 0.5s infinite alternate;
 }
+.gameBoard-border {
+  border-width: 14px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(90deg, yellow, green, pink);
+  animation: neon-border 3s infinite alternate;
+}
+
+.gameBoard-border:hover {
+  animation: neon-border 0.5s infinite alternate;
+}
+
 @keyframes neon-border {
   0% {
     border-image-source: linear-gradient(90deg, yellow, green, pink);
@@ -42,6 +52,7 @@ body {
     border-image-source: linear-gradient(90deg, green, pink, yellow);
   }
 }
+
 .neon-text {
   background: linear-gradient(90deg, red, blue, purple);
   background-size: 300% 300%;

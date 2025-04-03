@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex-col place-items-center drop-shadow-[0_2px_2px_yellow]">
       <div>
-        <Link href={`/selectCategory`}>
+        <Link href={`/gameBoard`}>
           <button className="btn-border neon-text cursor-pointer p-4 mt-20 text-lg font-bold  drop-shadow-xl">
             Start Game
           </button>
