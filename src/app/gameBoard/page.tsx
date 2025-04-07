@@ -1,3 +1,4 @@
+import CountDown from "@/components/CountDown";
 import React from "react";
 
 const gameBoard = () => {
@@ -8,6 +9,7 @@ const gameBoard = () => {
 "
       >
         <h1 className="neon-text text-2xl font-bold">Seçili kelime</h1>
+        <CountDown />
       </div>
     </div>
   );
