@@ -5,7 +5,7 @@ import { CgProfile } from "react-icons/cg";
 
 const Header = () => {
   return (
-    <div className="flex align-center justify-between p-6 header-border drop-shadow-[0_2px_2px_yellow]">
+    <div className=" neon-header-border flex align-center justify-between p-6 drop-shadow-[0_2px_2px_yellow]">
       <div>
         <button>
           <CgMenu className="size-7 text-green-400 hover:text-yellow-200 cursor-pointer" />

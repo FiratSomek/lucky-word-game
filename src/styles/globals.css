@@ -11,23 +11,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.header-border {
+.neon-header-border {
   border-width: 10px;
   border-image-slice: 1;
   border-image-source: linear-gradient(90deg, yellow, green, pink);
   animation: neon-border 3s infinite alternate;
 }
 
-.header-border:hover {
+.neon-header-border:hover {
   animation: neon-border 0.5s infinite alternate;
 }
-.btn-border {
+.neon-button-border {
   border-width: 8px;
   border-image-slice: 1;
   border-image-source: linear-gradient(90deg, yellow, green, pink);
   animation: neon-border 3s infinite alternate;
 }
-.btn-border:hover {
+.neon-button-border:hover {
   animation: neon-border 0.5s infinite alternate;
 }
 .gameBoard-border {
