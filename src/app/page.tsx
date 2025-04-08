@@ -5,14 +5,14 @@ export default function Home() {
     <div className="flex-col place-items-center drop-shadow-[0_2px_2px_yellow]">
       <div>
         <Link href={`/categoryPage`}>
-          <button className="btn-border neon-text cursor-pointer p-4 mt-20 text-lg font-bold  drop-shadow-xl">
-            Start Game
+          <button className="neon-button-border  cursor-pointer p-4 mt-20 text-lg font-bold  drop-shadow-xl">
+            <span className="neon-text">Start Game</span>
           </button>
         </Link>
       </div>
       <div>
-        <button className="btn-border neon-text cursor-pointer p-4 mt-20 text-lg font-bold drop-shadow-xl">
-          Show Last 5 Game Results
+        <button className="neon-button-border neon-text cursor-pointer p-4 mt-20 text-lg font-bold drop-shadow-xl">
+          <span className="neon-text">Show Last 5 Game Results</span>
         </button>
       </div>
     </div>
