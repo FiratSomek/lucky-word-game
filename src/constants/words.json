@@ -2,26 +2,35 @@
   "categories": {
     "General Knowledge": [
       {
+        "id": 1,
         "word": "Democracy",
         "correct": "A system of government where citizens participate directly or indirectly in decision-making.",
         "incorrect": "A form of government where one person holds absolute power."
       },
+
       {
+        "id": 2,
         "word": "Constitution",
         "correct": "A written document that defines the fundamental legal principles of a state.",
         "incorrect": "A legal document used only by courts."
       },
+
       {
+        "id": 3,
         "word": "Mesopotamia",
         "correct": "A historical region known as the cradle of civilization.",
         "incorrect": "A desert region in Africa."
       },
+
       {
+        "id": 4,
         "word": "Euro",
         "correct": "The official currency of the European Union.",
         "incorrect": "The most commonly used currency in Asia."
       },
+
       {
+        "id": 5,
         "word": "Everest",
         "correct": "The highest mountain in the world.",
         "incorrect": "The deepest ocean trench in the world."
@@ -29,26 +38,31 @@
     ],
     "History": [
       {
+        "id": 1,
         "word": "Fall of Constantinople",
         "correct": "Occurred in 1453 when the Ottomans conquered the city.",
         "incorrect": "Happened in 1071 when the Byzantines invaded."
       },
       {
+        "id": 2,
         "word": "Industrial Revolution",
         "correct": "A period of major industrialization that began in the 18th century in Britain.",
         "incorrect": "A war period that started in the 20th century in America."
       },
       {
+        "id": 3,
         "word": "French Revolution",
         "correct": "A 1789 revolution that ended monarchy in France.",
         "incorrect": "A 19th-century event when France discovered America."
       },
       {
+        "id": 4,
         "word": "Gallipoli Campaign",
         "correct": "A key battle of World War I between the Ottoman Empire and Allied forces.",
         "incorrect": "A battle in World War II when Germany invaded Russia."
       },
       {
+        "id": 5,
         "word": "Magna Carta",
         "correct": "A 1215 document limiting the power of the English king.",
         "incorrect": "An agreement that unified all European kingdoms."
@@ -56,26 +70,31 @@
     ],
     "Science & Technology": [
       {
+        "id": 1,
         "word": "Newton",
         "correct": "A scientist who formulated the law of universal gravitation.",
         "incorrect": "The inventor of electricity."
       },
       {
+        "id": 2,
         "word": "Photosynthesis",
         "correct": "The process by which plants convert light into energy.",
         "incorrect": "A type of soil used for plant growth."
       },
       {
+        "id": 3,
         "word": "Atom",
         "correct": "The smallest unit of matter.",
         "incorrect": "The largest planet in the solar system."
       },
       {
+        "id": 4,
         "word": "Internet",
         "correct": "A global network connecting millions of computers.",
         "incorrect": "A private system used only by scientists."
       },
       {
+        "id": 5,
         "word": "Tesla",
         "correct": "A scientist known for his discoveries in electricity and magnetism.",
         "incorrect": "The inventor of the first airplane."
@@ -83,26 +102,31 @@
     ],
     "Art & Literature": [
       {
+        "id": 1,
         "word": "Shakespeare",
         "correct": "A famous English playwright and poet.",
         "incorrect": "A renowned Italian painter."
       },
       {
+        "id": 2,
         "word": "Mona Lisa",
         "correct": "A world-famous painting by Leonardo da Vinci.",
         "incorrect": "An ancient Greek sculpture."
       },
       {
+        "id": 3,
         "word": "Sonnet",
         "correct": "A 14-line poem with a specific rhyme scheme.",
         "incorrect": "A type of novel from the 18th century."
       },
       {
+        "id": 4,
         "word": "Impressionism",
         "correct": "An art movement focused on light and color.",
         "incorrect": "A form of sculpture made from marble."
       },
       {
+        "id": 5,
         "word": "Fiction",
         "correct": "A genre of literature based on imaginary events.",
         "incorrect": "A historical account of real events."
@@ -110,26 +134,31 @@
     ],
     "Sports": [
       {
+        "id": 1,
         "word": "Olympics",
         "correct": "An international multi-sport event held every four years.",
         "incorrect": "A football championship held annually."
       },
       {
+        "id": 2,
         "word": "Marathon",
         "correct": "A long-distance running race of 42.195 km.",
         "incorrect": "A type of short sprint race."
       },
       {
+        "id": 3,
         "word": "Basketball",
         "correct": "A team sport played with a ball and a hoop.",
         "incorrect": "A solo sport involving a racket."
       },
       {
+        "id": 4,
         "word": "World Cup",
         "correct": "The most prestigious football tournament held every four years.",
         "incorrect": "A cricket league held every year."
       },
       {
+        "id": 5,
         "word": "Tennis",
         "correct": "A sport played with a racket and ball on a court.",
         "incorrect": "A water-based sport played in a pool."
@@ -137,26 +166,31 @@
     ],
     "Geography": [
       {
+        "id": 1,
         "word": "Amazon Rainforest",
         "correct": "The largest tropical rainforest on Earth.",
         "incorrect": "A large desert in North America."
       },
       {
+        "id": 2,
         "word": "Sahara",
         "correct": "The largest hot desert in the world.",
         "incorrect": "A frozen tundra in Antarctica."
       },
       {
+        "id": 3,
         "word": "Mount Everest",
         "correct": "The highest peak in the world.",
         "incorrect": "The deepest oceanic trench."
       },
       {
+        "id": 4,
         "word": "Nile River",
         "correct": "The longest river in the world.",
         "incorrect": "A mountain range in Europe."
       },
       {
+        "id": 5,
         "word": "Great Barrier Reef",
         "correct": "The world's largest coral reef system.",
         "incorrect": "A famous underwater cave system."
@@ -164,26 +198,31 @@
     ],
     "Entertainment & Pop Culture": [
       {
+        "id": 1,
         "word": "Hollywood",
         "correct": "The center of the American film industry.",
         "incorrect": "A historical city in Europe."
       },
       {
+        "id": 2,
         "word": "Grammy Awards",
         "correct": "A prestigious music award ceremony.",
         "incorrect": "An international sports competition."
       },
       {
+        "id": 3,
         "word": "Netflix",
         "correct": "A popular streaming service for movies and TV shows.",
         "incorrect": "A news broadcasting channel."
       },
       {
+        "id": 4,
         "word": "Marvel",
         "correct": "A comic book publisher known for superhero films.",
         "incorrect": "A sports organization."
       },
       {
+        "id": 5,
         "word": "Elvis Presley",
         "correct": "A famous American singer known as the King of Rock and Roll.",
         "incorrect": "A classical composer from the 18th century."
@@ -191,26 +230,31 @@
     ],
     "Mathematics & Logic": [
       {
+        "id": 1,
         "word": "Pi",
         "correct": "A mathematical constant approximately equal to 3.14159.",
         "incorrect": "The result of multiplying any number by zero."
       },
       {
+        "id": 2,
         "word": "Prime Number",
         "correct": "A number that has only two divisors: 1 and itself.",
         "incorrect": "A number that can be divided by any other number."
       },
       {
+        "id": 3,
         "word": "Pythagorean Theorem",
         "correct": "A mathematical principle relating the sides of a right triangle.",
         "incorrect": "A formula used to calculate the area of a circle."
       },
       {
+        "id": 4,
         "word": "Infinity",
         "correct": "A concept describing something without any limit.",
         "incorrect": "The largest number that can be written down."
       },
       {
+        "id": 5,
         "word": "Factorial",
         "correct": "The product of all positive integers up to a given number.",
         "incorrect": "The sum of all even numbers."
