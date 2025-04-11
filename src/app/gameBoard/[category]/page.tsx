@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import words from "../../../constants/words.json";
+import CountDown from "@/components/CountDown";
 
 const gameBoard = () => {
   const params = useParams();
@@ -16,10 +17,12 @@ const gameBoard = () => {
 
   const questions = currentCategory ? words.categories[currentCategory] : [];
 
+  console.log(questions);
+
   return (
     <div className="flex h-screen justify-center items-center drop-shadow-[0_4px_4px_yellow]">
       <div
-        className="gameBoard-border flex flex-col items-center w-3/4 h-128 
+        className="gameBoard-border flex flex-col items-center justify-between p-5 w-3/4 h-128 
 "
       >
         <div>
@@ -27,7 +30,16 @@ const gameBoard = () => {
             {currentCategory}
           </h1>
         </div>
-        <div></div>
+        <div>
+          {questions.map((item, id) => (
+            <ul key={id}>
+              <li>{item.word}</li>
+            </ul>
+          ))}
+        </div>
+        <div>
+          <CountDown />
+        </div>
       </div>
     </div>
   );

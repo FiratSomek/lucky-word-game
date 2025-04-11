@@ -14,7 +14,6 @@ body {
 .neon-header-border {
   border-width: 10px;
   border-image-slice: 1;
-  border-image-source: linear-gradient(90deg, yellow, green, pink);
   animation: neon-border 3s infinite alternate;
 }
 
@@ -24,7 +23,6 @@ body {
 .neon-button-border {
   border-width: 8px;
   border-image-slice: 1;
-  border-image-source: linear-gradient(90deg, yellow, green, pink);
   animation: neon-border 3s infinite alternate;
 }
 .neon-button-border:hover {
@@ -33,7 +31,6 @@ body {
 .gameBoard-border {
   border-width: 14px;
   border-image-slice: 1;
-  border-image-source: linear-gradient(90deg, yellow, green, pink);
   animation: neon-border 3s infinite alternate;
 }
 
