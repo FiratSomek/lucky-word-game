@@ -2,6 +2,7 @@
 import words from "../constants/words.json";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { normalizeCategory } from "@/app/utils/normalize";
 
 export default function CategoryList() {
   const [ready, setReady] = useState(false);
@@ -10,9 +11,6 @@ export default function CategoryList() {
   const router = useRouter();
 
   const categoryTitles = Object.keys(words.categories);
-
-  const normalizeCategory = (str: string) =>
-    str.toLowerCase().replace(/[^a-z0-9]/gi, "");
 
   useEffect(() => {
     if (ready && countDownToStart > 0) {

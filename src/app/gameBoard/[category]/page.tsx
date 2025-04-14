@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import words from "../../../constants/words.json";
 import CountDown from "@/components/CountDown";
 import { useState } from "react";
+import QuestionComponent from "@/components/QuestionComponent";
 
 const gameBoard = () => {
   const params = useParams();
@@ -32,22 +33,8 @@ const gameBoard = () => {
             {currentCategory}
           </h1>
         </div>
-        <div>
-          {question && (
-            <ul>
-              <li>{question.word}</li>
-            </ul>
-          )}
-        </div>
-        <div>
-          <form>
-            <label htmlFor="">
-              <input type="radio" /> {question && <p>{question.correct}</p>}
-            </label>
-            <input type="radio" />
-            <label htmlFor=""></label>
-          </form>
-        </div>
+
+        <div>{question && <QuestionComponent question={question} />}</div>
         <div>
           <CountDown />
         </div>
