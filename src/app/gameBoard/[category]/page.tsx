@@ -9,7 +9,7 @@ import QuestionComponent from "@/components/QuestionComponent";
 const gameBoard = () => {
   const params = useParams();
   const category = params?.category as string;
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
   const normalizeCategory = (str: string) =>
     str.toLowerCase().replace(/[^a-z0-9]/gi, "");
@@ -20,7 +20,9 @@ const gameBoard = () => {
 
   const questions = currentCategory ? words.categories[currentCategory] : [];
 
-  const question = questions.find((item, index) => index === currentQuestion);
+  const question = questions.find(
+    (item, index) => index === currentQuestionIndex
+  );
 
   return (
     <div className="flex h-screen justify-center items-center drop-shadow-[0_4px_4px_yellow]">
@@ -34,7 +36,15 @@ const gameBoard = () => {
           </h1>
         </div>
 
-        <div>{question && <QuestionComponent question={question} />}</div>
+        <div>
+          {question && (
+            <QuestionComponent
+              currentQuestionIndex={currentQuestionIndex}
+              setCurrentQuestionIndex={setCurrentQuestionIndex}
+              question={question}
+            />
+          )}
+        </div>
         <div>
           <CountDown />
         </div>
