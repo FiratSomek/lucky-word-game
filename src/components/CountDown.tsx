@@ -2,9 +2,11 @@
 import useCountdown from "@/hooks/useCountDown";
 import React from "react";
 
-const CountDown = () => {
-  const count = useCountdown(10);
+type CountDownProps = {
+  count: number;
+};
 
+const CountDown = ({ count }: CountDownProps) => {
   return (
     <div
       className={`font-bold text-2xl ${

@@ -2,7 +2,6 @@
 
 import { useParams } from "next/navigation";
 import words from "../../../constants/words.json";
-import CountDown from "@/components/CountDown";
 import { useState } from "react";
 import QuestionComponent from "@/components/QuestionComponent";
 
@@ -27,7 +26,7 @@ const gameBoard = () => {
   return (
     <div className="flex h-screen justify-center items-center drop-shadow-[0_4px_4px_yellow]">
       <div
-        className="gameBoard-border flex flex-col items-center justify-between p-5 w-3/4 h-128 
+        className="gameBoard-border flex flex-col items-center  p-5 w-3/4 h-128 
 "
       >
         <div>
@@ -44,9 +43,6 @@ const gameBoard = () => {
               question={question}
             />
           )}
-        </div>
-        <div>
-          <CountDown />
         </div>
       </div>
     </div>
