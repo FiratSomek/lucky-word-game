@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { normalizeCategory } from "@/app/utils/normalize";
 import CountDown from "./CountDown";
 import useCountdown from "@/hooks/useCountDown";
+import { useRouter } from "next/navigation";
 
 type QuestionType = {
   word: string;
@@ -21,7 +22,10 @@ const QuestionComponent = ({
   currentQuestionIndex,
 }: Props) => {
   const [selected, setSelected] = useState("");
-  const count = useCountdown(10);
+  const { count, reset } = useCountdown(10);
+  const router = useRouter();
+
+  console.log(count);
 
   const options = [
     { label: "Doğru Cevap", value: "correct", text: question.correct },
@@ -35,12 +39,20 @@ const QuestionComponent = ({
 
   useEffect(() => {
     if (selected || count === 0) {
-      setTimeout(() => {
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
-        setSelected("");
-      }, 1500);
+      const timeout = setTimeout(() => {
+        if (currentQuestionIndex < 4) {
+          setCurrentQuestionIndex((prev) => prev + 1);
+          setSelected("");
+          reset();
+        } else {
+          router.push("/result");
+        }
+      }, 1000);
+      return () => clearTimeout(timeout);
     }
-  }, [selected]);
+  }, [selected, count]);
+
+  useEffect(() => {}, [selected, count, currentQuestionIndex]);
   return (
     <div className="flex flex-col items-center ">
       <div className=" neon-text text-lg font-bold m-10">
@@ -56,6 +68,7 @@ const QuestionComponent = ({
                 value={option.value}
                 checked={selected === option.value}
                 onChange={(e) => setSelected(e.target.value)}
+                className="m-5 "
               />
               {option.text}
             </label>

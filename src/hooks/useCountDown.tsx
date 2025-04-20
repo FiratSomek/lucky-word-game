@@ -15,7 +15,9 @@ const useCountdown = (start: number) => {
     return () => clearInterval(timer);
   }, [count]);
 
-  return count;
+  const reset = () => setCount(start);
+
+  return { count, reset };
 };
 
 export default useCountdown;
