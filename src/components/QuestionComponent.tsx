@@ -25,8 +25,6 @@ const QuestionComponent = ({
   const { count, reset } = useCountdown(10);
   const router = useRouter();
 
-  console.log(count);
-
   const options = [
     { label: "Doğru Cevap", value: "correct", text: question.correct },
     { label: "Yanlış Cevap", value: "incorrect", text: question.incorrect },
@@ -75,7 +73,10 @@ const QuestionComponent = ({
           ))}
         </form>
       </div>
-      <div className="m-10">
+      <div className=" flex flex-col items-center m-10">
+        {selected === "" ? null : (
+          <h1 className="neon-text text-2xl">{selected}</h1>
+        )}
         <CountDown count={count} />
       </div>
     </div>
