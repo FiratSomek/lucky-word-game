@@ -10,7 +10,7 @@ const CountDown = ({ count }: CountDownProps) => {
   return (
     <div
       className={`font-bold text-2xl ${
-        count >= 4 ? "text-green-500" : "text-red-500 text-3xl"
+        count >= 4 ? "text-green-500" : "text-black-500 text-3xl"
       }`}
     >
       {count > 0 ? `${count}` : "Time is up!"}

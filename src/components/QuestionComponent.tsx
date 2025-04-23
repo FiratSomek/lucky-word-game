@@ -74,8 +74,16 @@ const QuestionComponent = ({
         </form>
       </div>
       <div className=" flex flex-col items-center m-10">
-        {selected === "" ? null : (
-          <h1 className="neon-text text-2xl">{selected}</h1>
+        {selected === "" && count === 0 ? (
+          <h1 className="text-yellow-300 font-bold text-2xl">No Answer</h1>
+        ) : (
+          <h1
+            className={`font-bold text-2xl ${
+              selected === "correct" ? "text-green-500" : "text-red-500"
+            }`}
+          >
+            {selected}
+          </h1>
         )}
         <CountDown count={count} />
       </div>
