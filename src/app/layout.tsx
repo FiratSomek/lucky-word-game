@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import "../styles/globals.css";
+import { QuizProvider } from "./QuizContext/QuizProvider";
 
 export default function RootLayout({
   children,
@@ -9,8 +10,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main className="main-content">{children}</main>
+        <QuizProvider>
+          <Header />
+          <main className="main-content">{children}</main>
+        </QuizProvider>
       </body>
     </html>
   );
