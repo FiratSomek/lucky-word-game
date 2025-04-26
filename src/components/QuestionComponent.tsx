@@ -4,6 +4,7 @@ import { normalizeCategory } from "@/app/utils/normalize";
 import CountDown from "./CountDown";
 import useCountdown from "@/hooks/useCountDown";
 import { useRouter } from "next/navigation";
+import { useQuiz } from "@/app/QuizContext/QuizProvider";
 
 type QuestionType = {
   word: string;
@@ -24,6 +25,7 @@ const QuestionComponent = ({
   const [selected, setSelected] = useState("");
   const { count, reset } = useCountdown(10);
   const router = useRouter();
+  const { addAnswer } = useQuiz();
 
   const options = [
     { label: "Doğru Cevap", value: "correct", text: question.correct },
@@ -38,6 +40,15 @@ const QuestionComponent = ({
   useEffect(() => {
     if (selected || count === 0) {
       const timeout = setTimeout(() => {
+        const isCorrect = selected === "correct";
+
+        addAnswer({
+          question: question.word,
+          selected,
+          correctAnswer: question.correct,
+          isCorrect,
+        });
+
         if (currentQuestionIndex < 4) {
           setCurrentQuestionIndex((prev) => prev + 1);
           setSelected("");

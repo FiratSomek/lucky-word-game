@@ -20,10 +20,10 @@ const QuizContext = createContext<QuizContextType | undefined>(undefined);
 export const QuizProvider = ({ children }: { children: React.ReactNode }) => {
   const [answers, setAnswers] = useState<Answer[]>([]);
 
+  console.log(answers);
   const addAnswer = (answer: Answer) => {
     setAnswers((prev) => [...prev, answer]);
   };
-
   const resetQuiz = () => {
     setAnswers([]);
   };
@@ -34,7 +34,9 @@ export const QuizProvider = ({ children }: { children: React.ReactNode }) => {
     </QuizContext.Provider>
   );
 };
+
 export const useQuiz = () => {
   const context = useContext(QuizContext);
   if (!context) throw new Error("useQuiz must be used within a QuizProvider");
+  return context;
 };
