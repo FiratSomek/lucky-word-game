@@ -6,6 +6,7 @@ type Answer = {
   question: string;
   selected: string;
   correctAnswer: string;
+  inCorrectAnswer: string;
   isCorrect: boolean;
 };
 

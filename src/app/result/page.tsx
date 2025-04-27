@@ -9,20 +9,20 @@ const Result = () => {
   return (
     <div className="flex h-screen justify-center items-center drop-shadow-[0_4px_4px_yellow]">
       <div
-        className="gameBoard-border flex flex-col items-center  p-5 w-3/4 h-128 
+        className="gameBoard-border flex flex-col justify-between items-center  p-5 w-3/4 h-200 
 "
       >
         {" "}
         <h1 className="text-2xl neon-text font-bold mb-6">Your Results</h1>
         <ul>
           {answers.map((ans, index) => (
-            <li key={index}>
+            <li key={index} className="mt-5">
               {" "}
-              <strong>Question:</strong> {ans.question} <br />
-              <strong>Your Answer:</strong> {ans.selected} <br />
-              <strong>Correct:</strong> {ans.correctAnswer} <br />
+              <strong>Word:</strong> {ans.question} <br />
+              <strong>Correct Answer:</strong> {ans.correctAnswer} <br />{" "}
+              <strong>Incorrect Answer:</strong> {ans.inCorrectAnswer} <br />
               <strong>
-                Result:{" "}
+                Your Choice:{" "}
                 <span
                   className={ans.isCorrect ? "text-green-500" : "text-red-500"}
                 >

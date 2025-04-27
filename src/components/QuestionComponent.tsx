@@ -46,6 +46,7 @@ const QuestionComponent = ({
           question: question.word,
           selected,
           correctAnswer: question.correct,
+          inCorrectAnswer: question.incorrect,
           isCorrect,
         });
 
