@@ -1,5 +1,4 @@
 "use client";
-import useCountdown from "@/hooks/useCountDown";
 import React from "react";
 
 type CountDownProps = {

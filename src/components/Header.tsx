@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { CgMenu } from "react-icons/cg";
-import { CgProfile } from "react-icons/cg";
+import ProfileMenu from "./ProfileMenu";
 
 const Header = () => {
   return (
@@ -20,7 +20,7 @@ const Header = () => {
       </div>
       <div>
         <button>
-          <CgProfile className="size-7 text-green-400 hover:text-yellow-200 cursor-pointer" />
+          <ProfileMenu />
         </button>
       </div>
     </div>

@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect, useMemo, useState } from "react";
-import { normalizeCategory } from "@/app/utils/normalize";
 import CountDown from "./CountDown";
 import useCountdown from "@/hooks/useCountDown";
 import { useRouter } from "next/navigation";
-import { useQuiz } from "@/app/QuizContext/QuizProvider";
+import { useQuiz } from "@/QuizContext/QuizProvider";
 
 type QuestionType = {
   word: string;
