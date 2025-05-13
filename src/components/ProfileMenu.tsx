@@ -22,6 +22,9 @@ export default function ProfileMenu() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  if (user && isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
   return (
     <div className="relative inline-block text-left" ref={menuRef}>
       <button onClick={() => setIsOpen(!isOpen)}>
