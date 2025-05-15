@@ -19,9 +19,7 @@ const Header = () => {
         </Link>
       </div>
       <div>
-        <button>
-          <ProfileMenu />
-        </button>
+        <ProfileMenu />
       </div>
     </div>
   );
