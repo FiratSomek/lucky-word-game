@@ -1,6 +1,6 @@
 "use client";
 
-import { useUser } from "@auth0/nextjs-auth0";
+import { useUser } from "@auth0/nextjs-auth0/";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { CgProfile } from "react-icons/cg";
@@ -10,7 +10,6 @@ import LogOutButton from "./buttons/LogOutButton";
 export default function ProfileMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const { user, isLoading, error } = useUser();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -22,9 +21,6 @@ export default function ProfileMenu() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  if (user && isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-
   return (
     <div className="relative inline-block text-left" ref={menuRef}>
       <button onClick={() => setIsOpen(!isOpen)}>
@@ -33,36 +29,31 @@ export default function ProfileMenu() {
 
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-10">
-          {user ? (
-            <div>
-              {" "}
-              <Link
-                href="/api/auth/logout"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-              >
-                <LogOutButton />
-              </Link>
-            </div>
-          ) : (
-            <div>
-              {" "}
-              <Link href="/api/auth/login">
-                <LogInButton />
-              </Link>
-              <a
-                href="/settings"
-                className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-              >
-                Ayarlar
-              </a>
-              <button
-                onClick={() => alert("Çıkış yapılıyor")}
-                className="w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100"
-              >
-                Çıkış Yap
-              </button>
-            </div>
-          )}
+          <div>
+            <Link
+              href="/api/auth/logout"
+              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              <LogOutButton />
+            </Link>
+          </div>
+          <div>
+            <Link href="/api/auth/login">
+              <LogInButton />
+            </Link>
+            <a
+              href="/settings"
+              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+            >
+              Ayarlar
+            </a>
+            <button
+              onClick={() => alert("Çıkış yapılıyor")}
+              className="w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100"
+            >
+              Çıkış Yap
+            </button>
+          </div>
         </div>
       )}
     </div>
