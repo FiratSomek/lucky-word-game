@@ -1,6 +1,5 @@
 "use client";
 
-import { useUser } from "@auth0/nextjs-auth0/";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { CgProfile } from "react-icons/cg";
@@ -28,31 +27,25 @@ export default function ProfileMenu() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-10">
+        <div className="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-50">
           <div>
-            <Link
-              href="/api/auth/logout"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+            {" "}
+            <div
+              className="relative w-1/2
+ inline-block text-left bg-green-500"
             >
-              <LogOutButton />
-            </Link>
+              <Link href="/auth/login">
+                <LogInButton />
+              </Link>
+            </div>
+            <div className="relative inline-block text-left bg-red-500 ">
+              <Link href="/auth/logout">
+                <LogOutButton />
+              </Link>
+            </div>
           </div>
           <div>
-            <Link href="/api/auth/login">
-              <LogInButton />
-            </Link>
-            <a
-              href="/settings"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-            >
-              Ayarlar
-            </a>
-            <button
-              onClick={() => alert("Çıkış yapılıyor")}
-              className="w-full text-left px-4 py-2 text-red-600 hover:bg-gray-100"
-            >
-              Çıkış Yap
-            </button>
+            <p>User</p>
           </div>
         </div>
       )}

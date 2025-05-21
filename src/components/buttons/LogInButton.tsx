@@ -3,7 +3,7 @@ import React from "react";
 const LogInButton = () => {
   return (
     <div>
-      <button className="block w-full font-bold px-4 py-2 text-green-800 hover:bg-gray-100 cursor-pointer">
+      <button className="font-bold px-4 py-2 w-full cursor-pointer hover:bg-gray-100 transition">
         Log In
       </button>
     </div>
