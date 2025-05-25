@@ -1,7 +1,7 @@
 "use client";
 import Header from "@/components/Header";
 import "../styles/globals.css";
-import { QuizProvider } from "../app/QuizContext/QuizProvider";
+import { QuizProvider } from "../QuizContext/QuizProvider";
 
 export default function RootLayout({
   children,

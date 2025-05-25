@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useQuiz } from "../QuizContext/QuizProvider";
+import { useQuiz } from "../../QuizContext/QuizProvider";
 import Link from "next/link";
 
 const Result = () => {

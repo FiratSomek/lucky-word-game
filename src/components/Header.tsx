@@ -2,14 +2,13 @@ import Link from "next/link";
 import React from "react";
 import { CgMenu } from "react-icons/cg";
 import ProfileMenu from "./ProfileMenu";
+import Menu from "./Menu";
 
 const Header = () => {
   return (
     <div className=" neon-header-border flex align-center justify-between p-6 drop-shadow-[0_2px_2px_yellow]">
       <div>
-        <button>
-          <CgMenu className="size-7 text-green-400 hover:text-yellow-200 cursor-pointer" />
-        </button>
+        <Menu />
       </div>
       <div>
         <Link href={`/`}>
