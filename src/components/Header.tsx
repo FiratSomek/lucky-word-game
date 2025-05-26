@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { CgMenu } from "react-icons/cg";
 import ProfileMenu from "./ProfileMenu";
 import Menu from "./Menu";
 
