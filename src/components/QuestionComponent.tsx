@@ -31,7 +31,7 @@ const QuestionComponent = ({
     { label: "Yanlış Cevap", value: "incorrect", text: question.incorrect },
   ];
 
-  const shuffledOprions = useMemo(
+  const shuffledOptions = useMemo(
     () => [...options].sort(() => Math.random() - 0.5),
     [question]
   );
@@ -69,17 +69,17 @@ const QuestionComponent = ({
       </div>
       <div>
         <form className="flex flex-col text-lg m-10">
-          {shuffledOprions.map((option, index) => (
-            <label key={index}>
+          {shuffledOptions.map((option, index) => (
+            <label key={index} className="hover:text-gray-400">
               <input
                 type="radio"
                 name="answer"
                 value={option.value}
                 checked={selected === option.value}
                 onChange={(e) => setSelected(e.target.value)}
-                className="m-5 "
+                className="m-5"
               />
-              {option.text}
+              <span> {option.text}</span>
             </label>
           ))}
         </form>
