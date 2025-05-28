@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { CgMenu } from "react-icons/cg";
+import LanguageButton from "./buttons/LanguageButton";
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,16 +24,10 @@ const Menu = () => {
       </button>
       {isOpen && (
         <div className="absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-50">
-          <div
-            className=" flex flex-col
-  "
-          >
-            <button className="font-bold px-4 py-2 w-full cursor-pointer hover:bg-gray-100 transition">
-              language
-            </button>
-            <button className="font-bold px-4 py-2 w-full cursor-pointer hover:bg-gray-100 transition">
-              mode
-            </button>
+          <div className="flex flex-col">
+            <div>
+              <LanguageButton />
+            </div>
           </div>
         </div>
       )}
