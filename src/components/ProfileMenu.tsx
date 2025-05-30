@@ -29,7 +29,6 @@ export default function ProfileMenu() {
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-50">
           <div>
-            {" "}
             <div
               className="relative w-1/2
  inline-block text-left bg-green-500"

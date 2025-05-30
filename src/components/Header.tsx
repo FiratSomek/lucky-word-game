@@ -1,14 +1,10 @@
 import Link from "next/link";
 import React from "react";
 import ProfileMenu from "./ProfileMenu";
-import Menu from "./Menu";
 
 const Header = () => {
   return (
-    <div className=" neon-header-border flex align-center justify-between p-6 drop-shadow-[0_2px_2px_yellow]">
-      <div>
-        <Menu />
-      </div>
+    <div className="relative flex items-center justify-center p-6 drop-shadow-[0_2px_2px_yellow] neon-header-border">
       <div>
         <Link href={`/`}>
           <span className="text-2xl font-bold neon-text cursor-pointer">
@@ -16,7 +12,7 @@ const Header = () => {
           </span>
         </Link>
       </div>
-      <div>
+      <div className="absolute right-6 top-6">
         <ProfileMenu />
       </div>
     </div>
