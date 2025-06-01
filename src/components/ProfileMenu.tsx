@@ -33,14 +33,10 @@ export default function ProfileMenu() {
               className="relative w-1/2
  inline-block text-left bg-green-500"
             >
-              <Link href="/auth/login">
-                <LogInButton />
-              </Link>
+              <LogInButton />
             </div>
-            <div className="relative inline-block text-left bg-red-500 ">
-              <Link href="/auth/logout">
-                <LogOutButton />
-              </Link>
+            <div className="relative w-1/2 inline-block text-left bg-red-500 ">
+              <LogOutButton />
             </div>
           </div>
           <div>
