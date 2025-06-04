@@ -33,7 +33,10 @@ export default function ProfileMenu() {
               className="relative w-1/2
  inline-block text-left bg-green-500"
             >
-              <LogInButton />
+              <Link href="/api/auth/login">
+                {" "}
+                <LogInButton />
+              </Link>
             </div>
             <div className="relative w-1/2 inline-block text-left bg-red-500 ">
               <LogOutButton />
